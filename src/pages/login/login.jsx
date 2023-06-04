@@ -1,5 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { LoginContainer,
+         Sidebar,
+         SidebarContainer,
+         SidebarTitle,
+         LoginContent } from './login.styles'
+import Logo from '../../components/logo-branca'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -25,29 +31,39 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={handleEmailChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="password">Senha:</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={handlePasswordChange}
-          required
-        />
-      </div>
-      <button type="submit">Entrar</button>
-    </form>
+    <LoginContainer>
+        <Sidebar>
+            <SidebarContainer>
+                <Logo />
+                <SidebarTitle>Faça como dezenas de estudantes_</SidebarTitle>
+            </SidebarContainer>
+        </Sidebar>
+        <LoginContent>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label htmlFor="email">Email:</label>
+                    <input
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={handleEmailChange}
+                    required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="password">Senha:</label>
+                    <input
+                    type="password"
+                    id="password"
+                    value={password}
+                    onChange={handlePasswordChange}
+                    required
+                    />
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </LoginContent>
+    </LoginContainer>
   );
 };
 
