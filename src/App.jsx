@@ -1,18 +1,16 @@
-import styled from 'styled-components'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './pages/login/login';
+import Cards from './pages/cards/cards';
 
-const Button = styled.button`
-  background-color: blue;
-  color: white;
-`
-
-function App() {
-
+const App = () => {
   return (
-    <>
-     <h1>Memobox</h1>
-     <Button>Clique aqui</Button>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Login/>} />
+        <Route path="/cards" element={<Cards/>} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
