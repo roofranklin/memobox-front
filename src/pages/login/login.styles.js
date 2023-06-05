@@ -34,14 +34,6 @@ export const SidebarTitle = styled.h1`
     }
 `
 
-export const Testimonial = styled.div`
-    background: #262626;
-    aspect-ratio: 16/10;
-    border-radius: 16px;
-    margin-top: 70px;
-    margin-right: 24px;
-`
-
 export const LoginContent = styled.main`
     color: #000000;
     width: 62%;
