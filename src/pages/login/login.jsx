@@ -5,7 +5,16 @@ import { LoginContainer,
          Sidebar,
          SidebarContainer,
          SidebarTitle,
-         LoginContent } from './login.styles'
+         Link,
+         LoginContent,
+         LoginBox,
+         LoginTitle,
+         LoginSubtitle,
+         FormBox,
+         FormItem,
+         FormLabel,
+         FormInput,
+         FormButton } from './login.styles'
 import Logo from '../../components/logo-branca'
 import Testimonials from '../../components/testimonials'
 
@@ -43,29 +52,34 @@ const Login = () => {
             </SidebarContainer>
         </Sidebar>
         <LoginContent>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input
+          <LoginBox>
+            <LoginTitle>memobox_</LoginTitle>
+            <LoginSubtitle>Ainda não tem uma conta? <a href="#">Comece de graça</a> 😎</LoginSubtitle>
+            <FormBox onSubmit={handleSubmit}>
+                <FormItem>
+                    <FormLabel htmlFor="email">Email:</FormLabel>
+                    <FormInput
                     type="email"
                     id="email"
                     value={email}
                     onChange={handleEmailChange}
                     required
                     />
-                </div>
-                <div>
-                    <label htmlFor="password">Senha:</label>
-                    <input
+                </FormItem>
+                <FormItem>
+                    <FormLabel htmlFor="password">Senha:</FormLabel>
+                    <FormInput
                     type="password"
                     id="password"
                     value={password}
                     onChange={handlePasswordChange}
                     required
                     />
-                </div>
-                <button type="submit">Entrar</button>
-            </form>
+                </FormItem>
+                <Link to="#">Esqueci minha senha</Link>
+                <FormButton type="submit">Acessar</FormButton>
+            </FormBox>
+          </LoginBox>
         </LoginContent>
     </LoginContainer>
   );

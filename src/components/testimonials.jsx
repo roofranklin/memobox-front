@@ -25,8 +25,6 @@ const responsive = {
 };
 
 const Testimonials = () => {
-  
-
     return (
         <AliceCarousel
             mouseTracking
@@ -36,8 +34,7 @@ const Testimonials = () => {
             animationType="slide"
             animationDuration={1000}
             disableButtonsControls
-        />
-         
+        />       
     );
   };
   
