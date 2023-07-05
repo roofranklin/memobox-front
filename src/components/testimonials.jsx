@@ -12,6 +12,7 @@ const Testimonial = styled.div`
     margin-right: 24px;
     padding: 24px;
 `
+
 const TestimonialInfo = styled.div`
     display: flex;
     align-items: center;
@@ -20,6 +21,7 @@ const TestimonialInfo = styled.div`
 `
 
 const Avatar = styled.img``
+
 const Bio = styled.div`
     font-family: 'Mulish', sans-serif;
 `
