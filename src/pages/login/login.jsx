@@ -1,20 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { LoginContainer,
-         Sidebar,
-         SidebarContainer,
-         SidebarTitle,
-         Link,
-         LoginContent,
-         LoginBox,
-         LoginTitle,
-         LoginSubtitle,
-         FormBox,
-         FormItem,
-         FormLabel,
-         FormInput,
-         FormButton } from './login.styles'
+import { LoginContainer, Sidebar, SidebarContainer, SidebarTitle, Link,
+         LoginContent, LoginBox, LoginTitle, LoginSubtitle, FormBox,
+         FormItem, FormLabel, FormInput, FormButton } from './login.styles'
+         
 import Logo from '../../components/logo-branca'
 import Testimonials from '../../components/testimonials'
 
